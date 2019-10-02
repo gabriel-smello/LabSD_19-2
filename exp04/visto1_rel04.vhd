@@ -36,10 +36,3 @@ begin
     U1: mux4 port map(entradas2, F, Y)
 
 end arch1;
-
-#Arquivo_UCF_Visto_1
-NET "A" LOC = "P11"; #SW0
-NET "B" LOC = "L3"; #SW1
-NET "C" LOC = "K3"; #SW2
-NET "X" LOC = "M5"; #LD0
-NET "Y" LOC = "M11"; #LD1
