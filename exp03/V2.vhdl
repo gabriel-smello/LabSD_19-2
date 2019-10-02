@@ -1,15 +1,15 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity decodif is
+entity dec4x16 is
 	 port(A: in STD_LOGIC_VECTOR(0 to 3);
 	 Y: out STD_LOGIC_VECTOR(0 to 15));
-end decodif; 
+end dec4x16; 
 
 # A entrada bus de 4 bits.
 # Y saída bus de 16 bits.
 
-architecture decodif_op of decodif is
+architecture decodif_op of dec4x16 is
     signal entradas: STD_LOGIC_VECTOR(3 downto 0);
     begin
      entradas <= A(3) & A(2) & A(1) & A(0);
