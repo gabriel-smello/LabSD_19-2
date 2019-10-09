@@ -21,9 +21,9 @@ begin
 
     -- confirmar se a ordem esta correta
     -- entradas1 = "0" & C & not(C) & "1";
-    entradas1 = "1" & not(C) & C & "0";
+    entradas1 = '1' & not(C) & C & '0';
     -- entradas2 = "1" & not(C) & "0" & C;
-    entradas2 = C & "0" & not(C) & "1";
+    entradas2 = C & '0' & not(C) & '1';
     
     -- seletor
     F = A & B;
