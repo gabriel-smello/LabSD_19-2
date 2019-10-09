@@ -1,0 +1,9 @@
+#Arquivo_UFC_Visto_2
+NET "A" LOC = "P11"; #SWO
+NET "B" LOC = "L3"; #SW1
+NET "C" LOC = "K3"; #SW2
+NET "D" LOC = "B4"; #SW3
+NET "E" LOC = "G3"; #SW4
+NET "F" LOC = "F3"; #SW5
+NET "G" LOC = "E2"; #SW6
+NET "S" LOC = "M5"; #LD0
