@@ -9,17 +9,15 @@ end circuito2;
 architecture arch of circuito2 is
     
     component mux8 is 
-        port(D: in STD_Logic_Vector(7 downto 0);
-            S: in STD_Logic_Vector(2 downto 0);
-            Y: out STD_Logic);
+        port(S: in STD_LOGIC_VECTOR(2 downto 0);
+            D: in STD_LOGIC_VECTOR(7 downto 0);
+            Y: out STD_LOGIC);
     end component;
 
     component dec4x16 is
         port(A: in STD_Logic_Vector(3 downto 0);
             Y: out STD_Logic_Vector(15 downto 0));
     end component;
-
-        
 
     signal entradas_decod : in STD_Logic_Vector(3 downto 0);
     signal conexao : in STD_Logic_Vector(15 downto 0);
