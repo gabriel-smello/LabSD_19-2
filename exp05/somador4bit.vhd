@@ -12,8 +12,8 @@ architecture arch of somador4 is
         s, cout: out std_logic);
     end component;
 
-        signal (C: std_logic_vector(2 downto 0));
-        signal (S0, S1, S2, S3, S4: std_logic);
+        signal C: std_logic_vector(2 downto 0);
+        signal S0, S1, S2, S3, S4: std_logic;
 begin
     U0: somador port map(A(0), B(0),'0', S0, C(0));
     U1: somador port map(A(1), B(1), C(0), S1, C(1));
