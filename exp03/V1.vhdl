@@ -7,9 +7,9 @@ entity mux8 is
 	     Y: out STD_LOGIC);
 end mux8; 
 
-# S entrada bus de 3 bits.
-# D entrada bus de 8 bits.
-# Y saída de 1 bit.
+-- S entrada bus de 3 bits.
+-- D entrada bus de 8 bits.
+-- Y saída de 1 bit.
 
 architecture multiplex_op of mux8 is
 begin
