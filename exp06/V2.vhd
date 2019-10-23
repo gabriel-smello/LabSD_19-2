@@ -4,11 +4,11 @@ use ieee.std_logic_1164.all;
 entity registrador is
      port(clk, rst, load, dir, L, R: in std_logic;
         D: in std_logic_vector(3 downto 0);
-        Q: out std_logic);
+        Q: out std_logic_vector(3 downto 0));
 end registrador;
 
 architecture registrador_arch of registrador is
-    signal Qbuf std_logic_vector(3 downto 0);
+    signal Qbuf: std_logic_vector(3 downto 0);
 begin
     Q <= Qbuf;
     process(clk)
@@ -27,8 +27,7 @@ begin
                     end if;
                 end if;
             end if;
-            end if;
         end if;
     end process;
-                end registrador_arch;
+end registrador_arch;
                         
