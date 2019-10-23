@@ -1,0 +1,14 @@
+NET "rst" LOC = "G12"; # BTN0
+NET "load" LOC = "C11"; # BTN1
+NET "clk" LOC = "P11"; # SW0
+NET "dir" LOC = "L3"; # SW1
+NET "R" LOC = "K3"; # SW2
+NET “L” LOC = “B4”; # SW3
+NET "D(0)" LOC = "G3"; # SW4
+NET "D(1)" LOC = "F3"; # SW5
+NET "D(2)" LOC = "E2"; # SW6
+NET "D(3)" LOC = "N3"; # SW7
+NET “Q(0)" LOC = "M5"; # LD0
+NET "Q(1)" LOC = "M11"; # LD1
+NET "Q(2)" LOC = "P7"; # LD2
+NET "Q(3)" LOC = "P6"; # LD3
