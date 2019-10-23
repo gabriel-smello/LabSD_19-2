@@ -8,7 +8,7 @@ end FPJK;
 
 architecture arch1 of FPJK is
     signal JK : std_logic_vector(1 downto 0);
-    signal Qbuf : std_logic_vector;
+    signal Qbuf : std_logic;
 
 begin
     JK <= J & K;
@@ -20,9 +20,10 @@ begin
         elsif rising_edge(CLK) then
             case JK is
                 when "00" => Qbuf <= Qbuf;
-                when "01" => Qbuf <= '0'
-                when "10" => Qbuf <= '1'
+                when "01" => Qbuf <= '0';
+                when "10" => Qbuf <= '1';
                 when "11" => Qbuf <= not(Qbuf);
+                     when others => Qbuf <= Qbuf;
             end case;
         end if;
     end process;
