@@ -27,7 +27,6 @@ begin
                     end if;
                 end if;
             end if;
-            end if;
         end if;
     end process;
                 end registrador_arch;
