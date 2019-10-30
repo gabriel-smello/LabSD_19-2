@@ -3,13 +3,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity maquina_refri is 
     port(clock, reset : in STD_LOGIC;
-        A : in STD_LOGIC_VECTOR(1 downto 0)
+        A : in STD_LOGIC_VECTOR(1 downto 0);
         R, V, C : out STD_LOGIC);
 end maquina_refri;
 
 architecture maquina_refri_arch of maquina_refri is
 
-    type estado is (inicio, vinte_cinco, ciquenta, setenta_cinco, um_real,um_real_e_vinte_cinco, troco_vinte_cinco, troco_cinquenta, troco_setenta_cinco); -- TERMINAR
+    type estado is (inicio, vinte_cinco, cinquenta, setenta_cinco, um_real,um_real_e_vinte_cinco, troco_vinte_cinco, troco_cinquenta, troco_setenta_cinco);
     
     signal current_state, next_state : estado;
 
@@ -18,7 +18,7 @@ begin
     sync_proc: process(clock, reset)
     begin
         if(reset='1') then
-            current_state <= st_inicio;
+            current_state <= inicio;
         elsif rising_edge(clock) then
             current_state <= next_state;
         end if;
@@ -68,9 +68,9 @@ begin
                 elsif (A = "10") then
                     next_state <= um_real_e_vinte_cinco;
                 elsif (A = "11") then
-                    next_state <= troco_setenta_cinquenta;
+                    next_state <= troco_setenta_cinco;
                 else
-                    next_state <= setenta_cinca;
+                    next_state <= setenta_cinco;
                 end if;
             
             when um_real =>
