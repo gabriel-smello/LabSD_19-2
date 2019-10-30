@@ -1,0 +1,8 @@
+NET "clock" CLOCK_DEDICATED_ROUTE  = FALSE;
+NET "A(0)" LOC = "P11"; #SW0
+NET "A(1)" LOC = "L3"; #SW1
+NET "clock" LOC = "G12"; #BTN0
+NET "reset" LOC = "C11"; #BTN1
+NET "R" LOC = "M5"; #LD0
+NET "V" LOC = "M11"; #LD1
+NET "C" LOC = "P7"; #LD2

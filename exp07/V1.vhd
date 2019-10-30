@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity maquina_refri is 
     port(clock, reset : in STD_LOGIC;
         A : in STD_LOGIC_VECTOR(1 downto 0)
-        L, V, C : out STD_LOGIC);
+        R, V, C : out STD_LOGIC);
 end maquina_refri;
 
 architecture maquina_refri_arch of maquina_refri is
@@ -40,21 +40,37 @@ begin
             when vinte_cinco =>
             R <= '0'; V <= '0'; C <= '0';
                 if(A = "01") then
-                    next_state <= vinte_cinco;
-                elsif (A = "10") then
                     next_state <= cinquenta;
+                elsif (A = "10") then
+                    next_state <= setenta_cinco;
+                elsif (A = "11") then
+                    next_state <= troco_vinte_cinco;
                 else
-                    next_state <= inicio;
+                    next_state <= vinte_cinco;
                 end if;
 
             when cinquenta =>
             R <= '0'; V <= '0'; C <= '0';
                 if(A = "01") then
-                    next_state <= vinte_cinco;
+                    next_state <= setenta_cinco;
                 elsif (A = "10") then
-                    next_state <= cinquenta;
+                    next_state <= um_real_e_vinte_cinco;
+                elsif (A = "11") then
+                    next_state <= troco_cinquenta;
                 else
-                    next_state <= inicio;
+                    next_state <= cinquenta;
+                end if;
+
+            when setenta_cinco =>
+            R <= '0'; V <= '0'; C <= '0';
+                if(A = "01") then
+                    next_state <= um_real;
+                elsif (A = "10") then
+                    next_state <= um_real_e_vinte_cinco;
+                elsif (A = "11") then
+                    next_state <= troco_setenta_cinquenta;
+                else
+                    next_state <= setenta_cinca;
                 end if;
             
             when um_real =>
