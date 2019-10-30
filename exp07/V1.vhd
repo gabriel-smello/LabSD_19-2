@@ -58,7 +58,7 @@ begin
                 end if;
             
             when um_real =>
-            R <= '0'; V <= '0'; C <= '0';
+            R <= '1'; V <= '0'; C <= '0';
                 if(A = "01") then
                     next_state <= vinte_cinco;
                 elsif (A = "10") then
@@ -68,7 +68,7 @@ begin
                 end if;
             
             when um_real_e_vinte_cinco =>
-            R <= '0'; V <= '0'; C <= '0';
+            R <= '1'; V <= '1'; C <= '0';
                 if(A = "01") then
                     next_state <= vinte_cinco;
                 elsif (A = "10") then
@@ -78,7 +78,7 @@ begin
                 end if;
 
             when troco_vinte_cinco =>
-            R <= '0'; V <= '0'; C <= '0';
+            R <= '0'; V <= '1'; C <= '0';
                 if(A = "01") then
                     next_state <= vinte_cinco;
                 elsif (A = "10") then
@@ -88,7 +88,7 @@ begin
                 end if;
             
             when troco_cinquenta =>
-            R <= '0'; V <= '0'; C <= '0';
+            R <= '0'; V <= '0'; C <= '1';
                 if(A = "01") then
                     next_state <= vinte_cinco;
                 elsif (A = "10") then
@@ -98,7 +98,7 @@ begin
                 end if;
         
             when troco_setenta_cinco =>
-            R <= '0'; V <= '0'; C <= '0';
+            R <= '0'; V <= '1'; C <= '1';
                 if(A = "01") then
                     next_state <= vinte_cinco;
                 elsif (A = "10") then
