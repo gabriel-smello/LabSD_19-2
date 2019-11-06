@@ -1,3 +1,4 @@
+NET "clock" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "clock" LOC = "B8";
 NET "reset" LOC = "G12";
 NET "load" LOC = "C11";

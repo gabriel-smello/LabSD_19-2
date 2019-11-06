@@ -38,7 +38,7 @@ begin
     end if;
   end process sync_proc;
  
-  --L�gica de estado seguinte
+  --Logica de estado seguinte
   comb_proc: process(currentstate,num7seg0,num7seg1,num7seg2,num7seg3)
   begin
     case currentstate is
