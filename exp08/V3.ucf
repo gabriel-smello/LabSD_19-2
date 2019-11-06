@@ -1,0 +1,21 @@
+NET "CLK" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "CLK" LOC = "G12"; #BTN0
+
+NET "ligadesliga" LOC = "P11"; #SW0
+NET "sensorA" LOC = "L3"; #SW1
+NET "sensorB" LOC = "K3"; #SW2
+
+NET "num7seg(0)" LOC = "M12"; #g
+NET "num7seg(1)" LOC = "L13"; #f
+NET "num7seg(2)" LOC = "P12"; #e
+NET "num7seg(3)" LOC = "N11"; #d
+NET "num7seg(4)" LOC = "N14"; #c
+NET "num7seg(5)" LOC = "H12"; #b
+NET "num7seg(6)" LOC = "L14"; #a
+
+NET "displays(0)" LOC = "F12"; #AN0
+NET "displays(1)" LOC = "J12"; #AN1
+NET "displays(2)" LOC = "M12"; #AN2
+NET "displays(3)" LOC = "K12"; #AN3
+
